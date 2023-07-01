@@ -141,6 +141,50 @@ button {
   color: var(--orange);
 }
 
+.button--close {
+  display: grid;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.button--close:hover {
+  background-color: var(--very-dark-blue);
+}
+
+/* ==== modal ==== */
+.modal-overlay {
+  display: none;
+  place-items: center;
+  position: absolute;
+  inset: 0;
+  background-color: hsl(var(--dark-blue), 8%, 0.8);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-overlay--active {
+  display: grid;
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  padding: 3.2rem;
+  border-radius: 2.8rem;
+  background-color: var(--white);
+  color: hsl(var(--dark-blue), 18%);
+  font-size: 1.6rem;
+  width: min(30rem, 87.2%);
+  text-align: center;
+}
+
 /* ==== media queries ==== */
 @media (min-width: 24em) {
   .rating-card__icon,
