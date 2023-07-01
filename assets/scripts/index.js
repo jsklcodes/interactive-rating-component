@@ -1,6 +1,8 @@
 const ratingCard = document.querySelector('#rating-card');
 const submitButton = document.querySelector('#submit-button');
 const ratingButtons = document.querySelectorAll('[data-rating]');
+const modalOverlay = document.querySelector('#modal-overlay');
+const modalCloseButton = document.querySelector('#close-button');
 
 let clickedRatingButton;
 let selectedRating;
