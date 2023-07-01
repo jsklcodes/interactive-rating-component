@@ -39,6 +39,10 @@ function openModal() {
   modalOverlay.classList.add('modal-overlay--active');
 }
 
+function closeModal() {
+  modalOverlay.classList.remove('modal-overlay--active');
+}
+
 ratingButtons.forEach(ratingButton =>
   ratingButton.addEventListener('click', _ =>
     toggleActiveRatingButton(ratingButton)
@@ -48,3 +52,5 @@ ratingButtons.forEach(ratingButton =>
 submitButton.addEventListener('click', _ =>
   selectedRating ? changeRatingCardContent(selectedRating) : openModal()
 );
+
+modalCloseButton.addEventListener('click', closeModal);
