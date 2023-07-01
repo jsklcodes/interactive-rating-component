@@ -15,8 +15,30 @@ function toggleActiveRatingButton(ratingButton) {
   selectedRating = ratingButton.dataset.rating;
 }
 
+function changeRatingCardContent(selectedRating) {
+  const thankYouCardContent = `
+    <img src="assets/images/illustration-thank-you.svg" alt="" class="rating-card__image">
+
+    <p class="rating-card__result">You selected ${selectedRating} out of 5</p>
+
+    <h1 class="rating-card__title">Thank you!</h1>
+    <p class="rating-card__info">
+      We appreciate you taking the time to give a rating. If you ever need
+      more support, don’t hesitate to get in touch!
+    </p>
+    `;
+
+  ratingCard.textContent = '';
+  ratingCard.classList.add('rating-card--thank-you');
+  ratingCard.insertAdjacentHTML('afterbegin', thankYouCardContent);
+}
+
 ratingButtons.forEach(ratingButton =>
   ratingButton.addEventListener('click', _ =>
     toggleActiveRatingButton(ratingButton)
   )
+);
+
+submitButton.addEventListener('click', _ =>
+  changeRatingCardContent(selectedRating)
 );
