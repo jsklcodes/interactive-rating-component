@@ -1,0 +1,44 @@
+/* ==== base styles ==== */
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: 213, 19%;
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  background-color: var(--very-dark-blue);
+}
+
+body,
+main {
+  display: grid;
+  place-items: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
