@@ -53,6 +53,27 @@ button {
   background-color: hsl(var(--dark-blue), 18%);
 }
 
+.rating-card--thank-you {
+  text-align: center;
+  justify-items: center;
+  padding-block: 4.575rem;
+}
+
+.rating-card__image {
+  margin-bottom: 2.8rem;
+}
+
+.rating-card__result {
+  display: grid;
+  place-items: center;
+  background-color: hsl(var(--dark-blue), 22%);
+  color: var(--orange);
+  padding: 0.4rem 1.2rem;
+  border-radius: 1.6rem;
+  margin-bottom: 2.3rem;
+  font-size: 1.4rem;
+}
+
 .rating-card__icon {
   width: 4.2rem;
   height: 4.2rem;
