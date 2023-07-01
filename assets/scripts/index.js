@@ -35,6 +35,10 @@ function changeRatingCardContent(selectedRating) {
   ratingCard.insertAdjacentHTML('afterbegin', thankYouCardContent);
 }
 
+function openModal() {
+  modalOverlay.classList.add('modal-overlay--active');
+}
+
 ratingButtons.forEach(ratingButton =>
   ratingButton.addEventListener('click', _ =>
     toggleActiveRatingButton(ratingButton)
@@ -42,5 +46,5 @@ ratingButtons.forEach(ratingButton =>
 );
 
 submitButton.addEventListener('click', _ =>
-  changeRatingCardContent(selectedRating)
+  selectedRating ? changeRatingCardContent(selectedRating) : openModal()
 );
